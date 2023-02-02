@@ -1,0 +1,50 @@
+package ass_22Dec22;
+
+
+	interface Printable
+	{
+		void print();
+	}
+	interface Calculate
+	{
+		void cal();
+	}
+	class CalSquare implements Printable, Calculate 
+	{
+		public void print()
+		{
+			System.out.println("this is a square class");
+		}
+		public void cal()
+		{
+			int a,s=6;
+			a=s*s ;
+			System.out.println("The number of square:"+a);
+		}
+		
+	}
+	class CalCube implements Printable, Calculate 
+	{
+		public void print()
+		{
+			System.out.println("this is a Cube class");
+		}
+		public void cal()
+		{
+			int a,n=6;
+			a=n*n*n ;
+			System.out.println(" The number of Cube is:"+a);
+		}
+		
+	}
+	class UseCalCube3
+	{
+		public static void main(String args[])
+		{
+			CalSquare s1=new CalSquare();
+			s1.cal();
+			CalCube c1=new CalCube();
+			c1.cal();
+		}
+	}
+
